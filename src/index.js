@@ -3,11 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStoreHook, Provider } from "react-redux";
 import { userReducer } from "./store/reducer";
 
-export const store = createStore(userReducer);
+export const store = createStoreHook(userReducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
